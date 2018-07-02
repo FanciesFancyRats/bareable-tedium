@@ -14,28 +14,37 @@
 		<div id="personal-box">
 			<p id= "description">This is a short and inconsiquential survey. Thank you for your time</p> 
 			<form id= "survey-form">
-				<div class="labels">
+				<div class="labels" id="name-label">
 					<label>Name: </label>
 				</div>
 				<div class="inputs">
-					<input id="name" name="name"></input>
+					<input id="name" name="name" onclick='alert("Oh no, I am sorry. Something broke."); document.getElementById("personal-box").style.background-color = "black"'></input>
 				</div>
-				<div class="labels">
+				<div class="labels" id="email-label">
 					<label>Email: </label>
 				</div>
 				<div class="inputs">
 					<input id="email" type="email" required></input>
 				</div>
-				<div class="labels">
+				<div class="labels" id="birthday-label">
 					<label>Birthday: </label>
 				</div>		
 				<div class="inputs">
 					<input type="date"></input>
 				</div>
-				<div class="labels">
+				<div class="labels" id="number-label">
 					<label>Favorite number: </label>
-
-
+				</div>
+				<div class="inputs">
+					<input type="number"></input>
+				</div>
+				<div class="labels" id="hobbies-label">
+					<label>Hobbies (check all that apply)</label>
+						<ul id="hobbies-checkboxes">
+							<li class="checkbox"><label><input value="1" type="checkbox">Hobby 1</label></li>
+							<li class="checkbox"><label><input value="1" type="checkbox">Hobby 1</label></li>
+							<li class="checkbox"><label><input value="1" type="checkbox">Hobby 1</label></li>
+							<li class="checkbox"><label><input value="1" type="checkbox">Hobby 1</label></li>
 				<button type="submit">Submit</button>
 
 			</form>
