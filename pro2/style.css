@@ -1,0 +1,39 @@
+body{
+	background-color: black;
+}
+h1 {
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	line-height: 140px;
+}
+#description{
+	text-align: center;
+	color: white;
+
+}
+.title-box {
+	background-color: blue;
+	width: 80%;
+	justify-content: center;
+
+}
+#title-container{
+	height: 200px;
+	display: flex;
+	background-color: grey;
+	justify-content: center;
+}
+#personal-container{
+	background-color:grey;
+	display: flex;
+	height: 600px;
+	justify-content: center;
+	padding: 10px;
+
+}
+#personal-box{
+	background-color: teal;
+	width: 90%;
+		
+}
