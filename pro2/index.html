@@ -1,4 +1,5 @@
 <!doctype html>
+<script src="main.js"></script>
 <html>
 	<head>
 		<link rel="stylesheet" href="style.css">
@@ -18,13 +19,13 @@
 					<label>Name: </label>
 				</div>
 				<div class="inputs">
-					<input id="name" name="name" onclick='alert("Oh no, I am sorry. Something broke."); document.getElementById("personal-box").style.background-color = "black"'></input>
+					<input id="name" name="name" onclick="advancePlot(story)"></input>
 				</div>
 				<div class="labels" id="email-label">
 					<label>Email: </label>
 				</div>
 				<div class="inputs">
-					<input id="email" type="email" required></input>
+					<input id="email" type="email" required onclick='alert("Wait, wait, this is all wrong now"); onclick=document.body.style.backgroundImage = "url(noise.png)"; onclick=document.getElementById("personal-box").style.backgroundColor = "rgba(0, 0, 0, 0.3)";'></input>
 				</div>
 				<div class="labels" id="birthday-label">
 					<label>Birthday: </label>

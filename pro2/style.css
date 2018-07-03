@@ -16,16 +16,18 @@ h1 {
 	background-color: blue;
 	width: 80%;
 	justify-content: center;
+	border: 10px solid aqua;
+	border-radius: 15px;
 
 }
 #title-container{
 	height: 200px;
 	display: flex;
-	background-color: grey;
+	background-color: transparent;
 	justify-content: center;
 }
 #personal-container{
-	background-color:grey;
+	background-color:transparent;
 	display: flex;
 	height: 600px;
 	justify-content: center;
@@ -42,4 +44,7 @@ h1 {
 }
 #labels{
 
+}
+body{
+	background-image: url(error.png);
 }
