@@ -14,13 +14,14 @@ h1 {
 }
 .title-deco{
 	height: 0px;
-	width: 80%;
-	border-bottom: 7px solid black;
+	width: 70%;
+	border-bottom: 7px solid white;
 	background-color: pink;
 }
 .title-box {
 	padding: 0px px 0px;
-	border-bottom: 10px black solid;
+	border-bottom: 8px white solid;
+
 	height: 60px ;
 
 }
@@ -30,7 +31,7 @@ h1 {
 	background-color: transparent;
 	justify-content: right;
 }
-@media (max-width 900px
+@media (min-width 720px){
 #personal-container{
 	background-color:transparent;
 	display: flex;
@@ -38,6 +39,17 @@ h1 {
 	justify-content: center;
 	padding: 10px;
 
+}
+.form-container{
+	 display: flex;
+	 flex-direction: row;
+	 flex-wrap: wrap;
+}
+#personal-box {
+	display: flex;
+	flex-direction: row;
+
+}
 }
 #personal-box{
 	background-color: teal;
