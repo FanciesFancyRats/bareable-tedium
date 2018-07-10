@@ -1,14 +1,29 @@
 .outer{
 	background-color: grey;
-	height: 500px;
+	height: 700px;
+	width: 85%;
+	margin:auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: nowrap;
+	flex-direction: column;
+}
+@media (min-width: 650px){
+.outer{
+	background-color: grey;
+	height: 700px;
 	width: 85%;
 	margin:auto;
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
+	flex-direction: row;
 }
+}
+
 .inner{
 	background-color: dodgerblue;
-	height: 100px;
+	height: 300px;
 	width: 35%;
 
 }
