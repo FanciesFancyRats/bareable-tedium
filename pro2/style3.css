@@ -1,0 +1,18 @@
+.outer{
+	background-color: grey;
+	height: 500px;
+	width: 85%;
+	margin:auto;
+	display: flex;
+	justify-content: space-around;
+}
+.inner{
+	background-color: dodgerblue;
+	height: 100px;
+	width: 35%;
+
+}
+.notes{
+	display:flex;
+	flex-direction: column;
+}
