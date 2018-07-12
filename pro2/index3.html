@@ -4,13 +4,21 @@
 </head>
 
 <body>
+	<form id="survey-form">
 	<h1 id="title">Inconsiquential survey</h1>
 	<div class="title-deco"></div>
-	
+	<p id="description">This is a short survey that will ask a few general questions about you, thank you for your time</p>	
 	<div class="outer" id="outer">
-		<div class="inner">
+		<div class="inner names">
+		<label id="name-label">Name: </label>
+		<input type="text" id="name" required placeholder="Enter your name here"></input>
+		<label id="email-label">Email: </label>
+		<input type="email" id="email" required placeholder="name@example.com"></input>
+		<label id="number-label">Age: </label>
+		<input type="number" id="number" min="1" max="125" require placeholder="Age"></input>
 		</div>	
 		<div class="inner">
+			<input type="dropdown"></input>
 		</div>	
 		<div class="inner">
 		</div>	
@@ -23,7 +31,8 @@
 
 
 		
-
+		<button type="submit" style="display:block; width: 50%">Submit</button>
 	</div>
+	</form>
 
 </body>

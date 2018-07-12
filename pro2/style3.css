@@ -1,3 +1,18 @@
+#name-label, #email-label, #number-label{
+	display: block;
+	align-self: flex-start;	
+}
+#name, #last-name, #email, #number{
+	display: block;
+	align-self: flex-end;
+}
+
+.names{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
 body{
 	background-image: url(bg.jpg);
 	background-size: cover;
