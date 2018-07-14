@@ -17,16 +17,65 @@
 		<label id="number-label">Age: </label>
 		<input type="number" id="number" min="1" max="125" require placeholder="Age"></input>
 		</div>	
-		<div class="inner">
-			<input type="dropdown"></input>
+		<div class="inner names">
+			<label id="dropdown-label">Dropdown</label>
+			<select id="dropdown">
+				<option value="1">One</option>
+				<option value="2">Two</option>
+				<option value="3">Three</option>
+			</select>
+			<label id="dropdown2-label">Second dropdown</label>
+			<select id="2nd-dropdown">
+				<option value="4">Four</option>
+				<option value="5">Five</option>
+				<option value="6">Six</option>
+			</select>
+			<label id="dropdown3-label">Second dropdown</label>
+			<select id="3rd-dropdown">
+				<option value="7">Four</option>
+				<option value="8">Five</option>
+				<option value="9">Six</option>
+			</select>
+		</div>	
+		<div class="inner names">
+			<p>First choice: </p>
+			<label for="r1" name="r1-label">
+				<input type="radio" id="r1" name="1st-choice" />
+			Choice 1
+			</label>	
+			<label for="r1" name="r1-label">
+				<input type="radio" id="r2" name="1st-choice" />
+			Choice 2
+			</label>
+			<label for="r1" name="r1-label">
+				<input type="radio" id="r3" name="1st-choice" />
+			Choice 3
+			</label>
+			<p>Second choice: </p>
+			<label for="r2" name="r2-label">
+				<input type="radio" id="r4" name="2nd-choice" />
+			Choice 1
+			</label>	
+			<label for="r2" name="r1-label">
+				<input type="radio" id="r5" name="2nd-choice" />
+			Choice 2
+			</label>
+			<label for="r2" name="r1-label">
+				<input type="radio" id="r6" name="2nd-choice" />
+			Choice 3
+			</label>
+
+
+
 		</div>	
 		<div class="inner">
-		</div>	
-		<div class="inner">
+			<input id="c1" type="checkbox" name="options">Option 1</input>
+			<input id="c1" type="checkbox" name="options">Option 2</input>
+			<input id="c1" type="checkbox" name="options">Option 3</input>
 		</div>
 		<div class="inner-message">
-		</div>
-		<div class="inner-message">
+			<p>Additional comment: </p>
+			<textarea rows="6" style="width: 75%; margin: auto;"></textarea>
 		</div>
 
 

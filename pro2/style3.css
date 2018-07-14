@@ -1,8 +1,8 @@
-#name-label, #email-label, #number-label{
+#name-label, #email-label, #number-label, #dropdown-label{
 	display: block;
 	align-self: flex-start;	
 }
-#name, #last-name, #email, #number{
+#name, #last-name, #email, #number, #dropdown{
 	display: block;
 	align-self: flex-end;
 }
