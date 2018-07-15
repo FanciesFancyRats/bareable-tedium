@@ -6,11 +6,34 @@
 	display: block;
 	align-self: flex-end;
 }
+.checkbox-option{
+	display: block;
+	align-self: flex-start;
+}
 
 .names{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+}
+.checkboxes{
+	height: 75%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.radio-outer{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.radio-inner{
+	display: block;
+	align-self: center;
+}
+.radio-label{
+	width: 100%;
 }
 
 body{
@@ -70,7 +93,7 @@ h1{
 	background-color: rgba(167, 147, 118, 0.66);
 	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4); 
 	border-radius: 25px;
-	height: 2000px;
+	height: 1500px;
 	width: 85%;
 	margin:auto;
 	display: flex;
