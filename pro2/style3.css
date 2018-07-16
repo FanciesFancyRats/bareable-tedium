@@ -1,10 +1,41 @@
-#name-label, #email-label, #number-label, #dropdown-label{
+#name-label, #email-label, #number-label, #dropdown-label, #dropdown2-label, #dropdown3-label {
 	display: block;
 	align-self: flex-start;	
+	font-family: helvetica;
+	font-size: 20px;
+	color: white;
+	padding: 10px;
 }
-#name, #last-name, #email, #number, #dropdown{
+#comment-label{
+	display: block;
+	align-self: center;	
+	font-family: helvetica;
+	font-size: 20px;
+	color: white;
+	padding: 10px;
+
+}
+.radio-label-p {
+	display: block;
+	width: 100%;
+	align-self: flex-start;	
+	font-family: helvetica;
+	font-size: 20px;
+	color: white;
+	padding: 10px;
+}
+.radio-label{
+	font-family: helvetica;
+	font-size: 15px;
+	color: white;
+}
+
+#name, #last-name, #email, #number, #dropdown, #dropdown2, #dropdown3{
 	display: block;
 	align-self: flex-end;
+	font-family: helvetica;
+	font-size: 20px;
+	color: black;
 }
 .checkbox-option{
 	display: block;
@@ -87,6 +118,10 @@ h1{
 	width: 75%;
 	border-radius: 25px;
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4); 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 @media screen and (orientation: landscape){
 .outer{
