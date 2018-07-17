@@ -1,0 +1,6 @@
+body{
+	background: linear-gradient(rgb(162, 163, 226), rgb(195, 192, 245)) no-repeat;
+	min-height: 100%;
+	max-width: auto;
+	background-size: cover;
+}
