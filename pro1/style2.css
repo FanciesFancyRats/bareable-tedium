@@ -1,3 +1,25 @@
+body{
+	background: linear-gradient(rgb(162, 163, 226), rgb(195,192,245)) no-repeat;
+	margin: 0;
+}
+h1{
+	font-family: helvetica;
+	align-text: center;
+
+}
+.title-div{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center
+		
+}
+.title-text{
+	text-align: center;
+	display: block;
+}
 .title-grid-t{
 	display: grid;
 	grid-template-columns: 419px 1fr 419px; 
@@ -5,10 +27,14 @@
 }
 .title-grid-b{
 	display: grid;
-	grid-template-columns: 225px 1fr 225px;
+	grid-template-columns: 200px 1fr 200px;
+}
+.content-grid{
+	display: grid;
+	grid-template-columns: 129px 1fr 129px;
 }
 .help{
-	background-color: purple;
+	border: dashed purple 3px;
 }
 .flip{
 	transform: scaleX(-1);
