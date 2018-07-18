@@ -1,0 +1,3 @@
+.title-grid{
+	grid-template-columns: minmax(auto 418) minmax(auto auto)
+}
