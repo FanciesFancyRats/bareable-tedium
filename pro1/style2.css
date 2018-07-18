@@ -1,3 +1,15 @@
-.title-grid{
-	grid-template-columns: minmax(auto 418) minmax(auto auto)
+.title-grid-t{
+	display: grid;
+	grid-template-columns: 419px 1fr 419px; 
+
+}
+.title-grid-b{
+	display: grid;
+	grid-template-columns: 225px 1fr 225px;
+}
+.help{
+	background-color: purple;
+}
+.flip{
+	transform: scaleX(-1);
 }
