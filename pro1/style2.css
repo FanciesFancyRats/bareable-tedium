@@ -3,7 +3,8 @@ body{
 	margin: 0;
 }
 h1{
-	font-family: helvetica;
+	font-family: 'Dancing Script', cursive;
+	font-size: 64px;
 	align-text: center;
 
 }
@@ -22,20 +23,26 @@ h1{
 }
 .title-grid-t{
 	display: grid;
-	grid-template-columns: 419px 1fr 419px; 
+	grid-template-columns: 280px 1fr 280px; 
 
 }
 .title-grid-b{
 	display: grid;
-	grid-template-columns: 200px 1fr 200px;
+	grid-template-columns: 86px 1fr 86px;
 }
 .content-grid{
 	display: grid;
-	grid-template-columns: 129px 1fr 129px;
+	grid-template-columns: 86px 1fr 86px;
 }
 .help{
 	border: dashed purple 3px;
 }
 .flip{
 	transform: scaleX(-1);
+}
+@media screen and (max-width: 1035px){
+	.help{
+		background-color: yellow;	
+	}
+
 }
