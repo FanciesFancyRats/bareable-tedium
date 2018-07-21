@@ -1,3 +1,40 @@
 body{
+	margin: 0;
 
+}
+p{
+	font-size: 30px;
+	color: pink;
+}
+.header-flex{
+	margin: 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	height: 200px;
+	background-color: pink;
+	width: 100%
+
+}
+.menu-div{
+	display: block;
+}
+.form-div{
+	display: flex:
+	background-color: purple;
+	flex-direction: row;
+	justify-content: space-around
+	align-itmes: center;
+	height: 200px;
+	width: 100px;
+}
+.form-item{
+	display: block;
+}
+.filler-div{
+	height: 200px;
 }
