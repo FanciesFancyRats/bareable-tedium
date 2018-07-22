@@ -1,10 +1,11 @@
 body{
 	margin: 0;
+	background-color: #ccd5ff;
 
 }
 p{
 	font-size: 30px;
-	color: pink;
+	color: black;
 }
 .header-flex{
 	margin: 0;
@@ -15,8 +16,8 @@ p{
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	height: 450px;
-	background-color: pink;
+	height: 250px;
+	background-color: #7cc6fe;
 	width: 100%
 
 }
