@@ -1,3 +1,23 @@
+.submit-button{
+	display: block;
+	border: 0;
+	background: none;
+	box-shadow: none;
+	background-color: #7cc6fe;
+	height: 40px;
+	width: 25%;
+}
+.input{
+	font-size: 20px;
+}
+
+.visible-desktop{
+	display: none !important;
+}
+.visible-mobile{
+	display: inline !important;	
+}
+
 body{
 	margin: 0;
 	background-color: #ccd5ff;
@@ -16,26 +36,44 @@ p{
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	height: 250px;
-	background-color: #7cc6fe;
+	height: 200px;
+	background-color: #c88486;
 	width: 100%
 
 }
 .menu-item{
+	margin: 0;
 	display: block;
 }
 .form-div{
-	display: flex:
-	background-color: purple;
-	flex-direction: row;
-	justify-content: space-around
-	align-itmes: center;
-	height: 200px;
-	width: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 150px;
+	width: 100%;
+
 }
 .form-item{
 	display: block;
 }
 .filler-div{
-	height: 200px;
+	height: 110px;
+}
+@media (min-width: 655px){
+	.header-flex{
+		flex-direction: row;	
+		height: 110px;
+	}
+}
+@media (min-width: 1200px){
+	.visible-desktop{
+		display: inline !important;
+	}
+	.visible-mobile{
+		display: none !important;	
+	}
+	.header-flex{
+		flex-direction: row;	
+	}
 }
