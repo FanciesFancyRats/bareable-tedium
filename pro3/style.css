@@ -1,3 +1,29 @@
+h3{
+	text-align: center;
+}
+
+.select-button{
+	border: 0;
+	background: none;
+	box-shadow: none;
+	background-color: #7cc6fe;
+	height: 40px;
+	width: 25%;
+}
+
+.select-div{
+	display:flex;
+	justify-content: center;
+	align-items:center;
+}
+
+.pricing-img{
+	display:flex;
+	max-width: 100%;
+	max-height: 100%;
+
+}
+
 .video-div{
 	display: flex;
 	width: 100%;
@@ -10,16 +36,21 @@
 
 .pricing-grid{
 	display: flex;
-	grid-template-rows: 1fr 1fr 1fr;
-	height: 400px;
+	justify-content: space-around;
+	flex-direction: row;
+	
+	height: 600px;
 	width: 100%;
 }
 
 .pricing-div{
+	border: 2px black solid;
 	display:flex;
 	flex-direction: column;
-	height: 200px;
-	width: 20%;
+	justify-content: space-between;
+	height: 500px;
+	width: 30%;
+	min-width: 300px;
 }
 .bullet{
 }
@@ -157,5 +188,19 @@ p{
 		height: auto;
 		display:block;
 		overflow: auto;
+	}
+
+	.pricing-grid{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-direction: column;
+	
+		height: 1400px;
+		width: 100%;
+	}
+	.pricing-div{
+		min-width: 300px;	
+		height: 400px;
 	}
 }
