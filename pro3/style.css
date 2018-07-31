@@ -44,11 +44,10 @@ h3{
 }
 
 .pricing-div{
-	border: 2px black solid;
 	display:flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 500px;
+	height: 350px;
 	width: 30%;
 	min-width: 300px;
 }
@@ -196,11 +195,11 @@ p{
 		align-items: center;
 		flex-direction: column;
 	
-		height: 1400px;
+		height: 1200px;
 		width: 100%;
 	}
 	.pricing-div{
 		min-width: 300px;	
-		height: 400px;
+		height: 350px;
 	}
 }
