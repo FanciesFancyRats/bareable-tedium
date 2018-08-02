@@ -25,6 +25,7 @@ h3{
 }
 
 .video-div{
+	margin: 20px 0px 20px 0px;
 	display: flex;
 	width: 100%;
 	justify-content: center;
@@ -44,13 +45,16 @@ h3{
 }
 
 .pricing-div{
+	border: black 2px solid;
 	display:flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 350px;
+	align-items: center;
+	height: 450px;
 	width: 30%;
 	min-width: 300px;
 }
+
 .bullet{
 }
 
@@ -133,6 +137,7 @@ p{
 	display: block;
 }
 .about-div{
+	margin: 10px;
 	border: black 1px solid;
 	display: flex;
 	grid-template-columns: 1fr 100px 1fr 1fr;
