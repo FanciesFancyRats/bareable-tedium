@@ -51,7 +51,7 @@ h3{
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	height: 525px;
+	height: 500px;
 	width: 30%;
 	min-width: 300px;
 	border-radius: 15px;
@@ -90,6 +90,10 @@ p{
 	font-size: 30px;
 	color: black;
 }
+.footer-link{
+	font-size: 20px;
+	display: block;
+}
 .header-flex{
 	margin: 0;
 	position: fixed;
@@ -100,9 +104,16 @@ p{
 	justify-content: space-around;
 	align-items: center;
 	height: 200px;
-	background-color: #c88486;
+	background-color: #ccd5ff;
 	width: 100%
 
+}
+.footer-div{
+	display: flex;
+	justify-content: space-around;
+	background-color: #e7bbe3ff;
+	height: 60px;
+	margin: 0px 20px 0px 20px;
 }
 .menu-item{
 	margin: 0;

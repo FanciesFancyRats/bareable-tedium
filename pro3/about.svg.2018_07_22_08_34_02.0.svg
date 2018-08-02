@@ -2954,15 +2954,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.16"
-     inkscape:cx="-2601.3998"
+     inkscape:cx="-3704.5248"
      inkscape:cy="-174.9148"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:snap-nodes="false"
      inkscape:snap-others="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1023"
+     inkscape:window-width="1366"
+     inkscape:window-height="719"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1" />
@@ -3697,7 +3697,7 @@
        inkscape:path-effect="#path-effect5254"
        inkscape:original-d="m -293.30959,247.86335 -5.94697,4.69423" />
     <rect
-       style="fill:#ccd5e1;fill-opacity:1;stroke:#ffff00;stroke-width:1.1987462;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ccd5e1;fill-opacity:1;stroke:none;stroke-width:1.1987462;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect5122"
        width="608.25745"
        height="437.49515"

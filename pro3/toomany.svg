@@ -2364,17 +2364,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35355339"
-     inkscape:cx="-162.27926"
-     inkscape:cy="284.13857"
+     inkscape:zoom="0.5"
+     inkscape:cx="-384.03908"
+     inkscape:cy="818.11399"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:snap-others="false"
      inkscape:object-nodes="false"
      inkscape:snap-nodes="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1023"
+     inkscape:window-width="1366"
+     inkscape:window-height="719"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1" />
@@ -2395,7 +2395,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#ccd5e1;fill-opacity:1;stroke:#ffff00;stroke-width:1.1987462;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ccd5e1;fill-opacity:1;stroke:none;stroke-width:1.1987462;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect5122"
        width="608.25745"
        height="437.49515"
@@ -3494,8 +3494,8 @@
        id="path12582"
        inkscape:connector-curvature="0" />
     <path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 12.679744,34.788603 c 0,0 5.05522,-0.60753 7.59565,-0.62764 2.7543,-0.0218 8.24482,0.55006 8.24482,0.55006 0,0 -5.44577,0.62096 -8.18067,0.62764 -2.55983,0.006 -7.6598,-0.55006 -7.6598,-0.55006 z"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.32782513px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -389.97098,145.72108 c 0,0 5.04832,-0.93395 7.58527,-0.96486 2.75054,-0.0335 8.23355,0.8456 8.23355,0.8456 0,0 -5.43832,0.95459 -8.16948,0.96486 -2.55634,0.009 -7.64934,-0.8456 -7.64934,-0.8456 z"
        id="path1592"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cacac" />
