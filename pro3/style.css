@@ -146,8 +146,6 @@ a:hover{
 	display: block;
 }
 .nav-link{
-	margin: 0;
-	display: block;
 }
 .form-div{
 	display: flex;
@@ -175,7 +173,7 @@ a:hover{
 	width: 20px;
 }
 .about-text{
-	font-size: 15px;
+	font-size: 20px;
 	display: block;
 	margin: 0;
 }
@@ -207,6 +205,7 @@ a:hover{
 		flex-direction: row;	
 		height: 110px;
 	}
+	
 }
 @media (min-width: 1220px){
 
@@ -225,6 +224,11 @@ a:hover{
 	}
 }
 @media (max-width: 825px){
+	.about-text{
+		font-size: 15px;
+		display: block;
+		margin: 0;
+	}
 	.bullet{
 		display: none;	
 		margin: 10px;
