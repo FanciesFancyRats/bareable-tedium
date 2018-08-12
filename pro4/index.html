@@ -1,0 +1,52 @@
+<!doctype html>
+
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="flex-container">
+		<div class="material">
+			<h1>MIT/GNU Scheme 9.2</h1>
+		<h2>Overview</h2>
+		<p class="top-section">This manual is a detailed description of the MIT/GNU Scheme runtime system. It is intended to be a reference document for programmers. It does not describe how to run Scheme or how to interact with it — that is the subject of the MIT/GNU Scheme User's Manual.</p>
+
+<p>		This chapter summarizes the semantics of Scheme, briefly describes the MIT/GNU Scheme programming environment, and explains the syntactic and lexical conventions of the language. Subsequent chapters describe special forms, numerous data abstractions, and facilities for input and output.</p>
+
+<p>		Throughout this manual, we will make frequent references to standard Scheme, which is the language defined by the document Revised^4 Report on the Algorithmic Language Scheme, by William Clinger, Jonathan Rees, et al., or by ieee Std. 1178-1990, IEEE Standard for the Scheme Programming Language (in fact, several parts of this document are copied from the Revised Report). MIT/GNU Scheme is an extension of standard Scheme.</p>
+
+<p>These are the significant semantic characteristics of the Scheme language:</p>
+
+<p>Variables are statically scoped
+Scheme is a statically scoped programming language, which means that each use of a variable is associated with a lexically apparent binding of that variable. Algol is another statically scoped language. </p>
+<p>Types are latent
+Scheme has latent types as opposed to manifest types, which means that Scheme associates types with values (or objects) rather than with variables. Other languages with latent types (also referred to as weakly typed or dynamically typed languages) include APL, Snobol, and other dialects of Lisp. Languages with manifest types (sometimes referred to as strongly typed or statically typed languages) include Algol 60, Pascal, and C. </p>
+<p>Objects have unlimited extent
+All objects created during a Scheme computation, including procedures and continuations, have unlimited extent; no Scheme object is ever destroyed. The system doesn't run out of memory because the garbage collector reclaims the storage occupied by an object when the object cannot possibly be needed by a future computation. Other languages in which most objects have unlimited extent include APL and other Lisp dialects. </p>
+<p>Proper tail recursion
+Scheme is properly tail-recursive, which means that iterative computation can occur in constant space, even if the iterative computation is described by a syntactically recursive procedure. With a tail-recursive implementation, you can express iteration using the ordinary procedure-call mechanics; special iteration expressions are provided only for syntactic convenience. </p>
+<p>Procedures are objects
+Scheme procedures are objects, which means that you can create them dynamically, store them in data structures, return them as the results of other procedures, and so on. Other languages with such procedure objects include Common Lisp and ML. </p>
+<p>Continuations are explicit
+In most other languages, continuations operate behind the scenes. In Scheme, continuations are objects; you can use continuations for implementing a variety of advanced control constructs, including non-local exits, backtracking, and coroutines. </p>
+<p>Arguments are passed by value
+Arguments to Scheme procedures are passed by value, which means that Scheme evaluates the argument expressions before the procedure gains control, whether or not the procedure needs the result of the evaluations. ML, C, and APL are three other languages that pass arguments by value. In languages such as SASL and Algol 60, argument expressions are not evaluated unless the values are needed by the procedure.
+Scheme uses a parenthesized-list Polish notation to describe programs and (other) data. The syntax of Scheme, like that of most Lisp dialects, provides for great expressive power, largely due to its simplicity. An important consequence of this simplicity is the susceptibility of Scheme programs and data to uniform treatment by other Scheme programs. As with other Lisp dialects, the read primitive parses its input; that is, it performs syntactic as well as lexical decomposition of what it reads.</p>
+		<h2>Second</h2>
+		<p>Pellentesque risus velit, congue vitae nunc sed, convallis consequat orci. Nunc vitae elementum magna. Nam auctor ac mauris blandit scelerisque. Donec in pretium erat. Duis bibendum accumsan maximus. Aenean neque nibh, consequat eget gravida ac, porttitor non nisi. Nulla facilisi. Praesent nec diam quis urna semper suscipit eu nec nisi.</p>
+		<h2>Thrid</h2>
+		<p>Etiam auctor viverra mauris eu sagittis. Praesent rutrum justo convallis venenatis venenatis. Nunc ipsum elit, interdum quis ipsum nec, sagittis malesuada quam. Pellentesque quis mauris eget neque blandit molestie quis eget velit. Nam vel lacinia justo. In ex nunc, dictum eu nibh quis, viverra facilisis arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi eu augue libero. Phasellus tincidunt volutpat mi eu fringilla. Sed non pretium ante.</p>
+		<p>Vestibulum dui dui, posuere sit amet viverra in, suscipit ut ligula. Quisque id ornare orci. Curabitur quis lorem ut sapien malesuada egestas. Ut vitae ex turpis. Morbi ante neque, hendrerit vel sem nec, ornare egestas nibh. Praesent semper augue at ex iaculis, interdum suscipit turpis blandit. Aliquam nec feugiat ante. Proin vitae pharetra lacus. Fusce rutrum aliquet felis, non rhoncus enim feugiat vitae. Integer velit sem, tincidunt sed ligula et, volutpat ornare nisl. Integer auctor vel lacus ac aliquam. Nullam pellentesque molestie lorem ut luctus. Cras auctor enim in vehicula placerat</p>
+
+		<p>Suspendisse potenti. Suspendisse nulla neque, posuere et sapien ac, fringilla condimentum lorem. Duis semper faucibus dolor, nec bibendum massa facilisis a. Donec condimentum magna ac interdum vehicula. Morbi laoreet neque est, ac finibus erat mollis ac. Donec sodales diam et justo condimentum, vitae imperdiet tortor ultrices. Quisque magna nibh, interdum id hendrerit ut, viverra quis magna. Pellentesque finibus auctor lorem, lobortis tristique libero iaculis in. Proin consequat blandit risus at gravida. Pellentesque sagittis elit eget elit interdum, sit amet egestas metus congue. Quisque cursus ullamcorper viverra.</p>
+		</div>
+		<div class="nav-filler"></div>
+		<div class="nav-bar">
+			<ul>First</ul>
+			<ul>Second</ul>
+			<ul>Third</ul>	
+		</div>
+	</div>
+</body>
+
+

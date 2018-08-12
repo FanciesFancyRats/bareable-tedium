@@ -1,0 +1,11 @@
+body{
+	background-color: purple;
+}
+.intro{
+	height: 100vh;
+	background-color: blue;
+}
+.content{
+	height: 200px;
+	background-color: pink;
+}
