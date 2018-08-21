@@ -6,40 +6,459 @@
 
 <body>
 	<div class="flex-container">
-		<div class="material">
-			<h1>MIT/GNU Scheme 9.2</h1>
-		<h2>Overview</h2>
-		<p class="top-section">This manual is a detailed description of the MIT/GNU Scheme runtime system. It is intended to be a reference document for programmers. It does not describe how to run Scheme or how to interact with it — that is the subject of the MIT/GNU Scheme User's Manual.</p>
+		<main class="material" id="main-section">
+<h1 class="title">MIT/GNU Scheme</h1>
+<h1 class="chapter">1 Overview</h1>
 
-<p>		This chapter summarizes the semantics of Scheme, briefly describes the MIT/GNU Scheme programming environment, and explains the syntactic and lexical conventions of the language. Subsequent chapters describe special forms, numerous data abstractions, and facilities for input and output.</p>
+<p>This manual is a detailed description of the MIT/GNU Scheme runtime system. 
+It is intended to be a reference document for programmers.  It does not
+describe how to run Scheme or how to interact with it &mdash; that is the
+subject of the MIT/GNU Scheme User's Manual. </p>
 
-<p>		Throughout this manual, we will make frequent references to standard Scheme, which is the language defined by the document Revised^4 Report on the Algorithmic Language Scheme, by William Clinger, Jonathan Rees, et al., or by ieee Std. 1178-1990, IEEE Standard for the Scheme Programming Language (in fact, several parts of this document are copied from the Revised Report). MIT/GNU Scheme is an extension of standard Scheme.</p>
+   <p>This chapter summarizes the semantics of Scheme, briefly describes the
+MIT/GNU Scheme programming environment, and explains the syntactic and
+lexical conventions of the language.  Subsequent chapters describe
+special forms, numerous data abstractions, and facilities for input and
+output.
 
-<p>These are the significant semantic characteristics of the Scheme language:</p>
+   <p>Throughout this manual, we will make frequent references to
+standard Scheme, which is the language defined by the document
+Revised^4 Report on the Algorithmic Language Scheme, by William
+Clinger, Jonathan Rees, et al., or by ieee Std. 1178-1990,
+IEEE Standard for the Scheme Programming Language (in fact,
+several parts of this document are copied from the Revised
+Report).  MIT/GNU Scheme is an extension of standard Scheme.
 
-<p>Variables are statically scoped
-Scheme is a statically scoped programming language, which means that each use of a variable is associated with a lexically apparent binding of that variable. Algol is another statically scoped language. </p>
-<p>Types are latent
-Scheme has latent types as opposed to manifest types, which means that Scheme associates types with values (or objects) rather than with variables. Other languages with latent types (also referred to as weakly typed or dynamically typed languages) include APL, Snobol, and other dialects of Lisp. Languages with manifest types (sometimes referred to as strongly typed or statically typed languages) include Algol 60, Pascal, and C. </p>
-<p>Objects have unlimited extent
-All objects created during a Scheme computation, including procedures and continuations, have unlimited extent; no Scheme object is ever destroyed. The system doesn't run out of memory because the garbage collector reclaims the storage occupied by an object when the object cannot possibly be needed by a future computation. Other languages in which most objects have unlimited extent include APL and other Lisp dialects. </p>
-<p>Proper tail recursion
-Scheme is properly tail-recursive, which means that iterative computation can occur in constant space, even if the iterative computation is described by a syntactically recursive procedure. With a tail-recursive implementation, you can express iteration using the ordinary procedure-call mechanics; special iteration expressions are provided only for syntactic convenience. </p>
-<p>Procedures are objects
-Scheme procedures are objects, which means that you can create them dynamically, store them in data structures, return them as the results of other procedures, and so on. Other languages with such procedure objects include Common Lisp and ML. </p>
-<p>Continuations are explicit
-In most other languages, continuations operate behind the scenes. In Scheme, continuations are objects; you can use continuations for implementing a variety of advanced control constructs, including non-local exits, backtracking, and coroutines. </p>
-<p>Arguments are passed by value
-Arguments to Scheme procedures are passed by value, which means that Scheme evaluates the argument expressions before the procedure gains control, whether or not the procedure needs the result of the evaluations. ML, C, and APL are three other languages that pass arguments by value. In languages such as SASL and Algol 60, argument expressions are not evaluated unless the values are needed by the procedure.
-Scheme uses a parenthesized-list Polish notation to describe programs and (other) data. The syntax of Scheme, like that of most Lisp dialects, provides for great expressive power, largely due to its simplicity. An important consequence of this simplicity is the susceptibility of Scheme programs and data to uniform treatment by other Scheme programs. As with other Lisp dialects, the read primitive parses its input; that is, it performs syntactic as well as lexical decomposition of what it reads.</p>
-		<h2>Second</h2>
-		<p>Pellentesque risus velit, congue vitae nunc sed, convallis consequat orci. Nunc vitae elementum magna. Nam auctor ac mauris blandit scelerisque. Donec in pretium erat. Duis bibendum accumsan maximus. Aenean neque nibh, consequat eget gravida ac, porttitor non nisi. Nulla facilisi. Praesent nec diam quis urna semper suscipit eu nec nisi.</p>
-		<h2>Thrid</h2>
-		<p>Etiam auctor viverra mauris eu sagittis. Praesent rutrum justo convallis venenatis venenatis. Nunc ipsum elit, interdum quis ipsum nec, sagittis malesuada quam. Pellentesque quis mauris eget neque blandit molestie quis eget velit. Nam vel lacinia justo. In ex nunc, dictum eu nibh quis, viverra facilisis arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi eu augue libero. Phasellus tincidunt volutpat mi eu fringilla. Sed non pretium ante.</p>
-		<p>Vestibulum dui dui, posuere sit amet viverra in, suscipit ut ligula. Quisque id ornare orci. Curabitur quis lorem ut sapien malesuada egestas. Ut vitae ex turpis. Morbi ante neque, hendrerit vel sem nec, ornare egestas nibh. Praesent semper augue at ex iaculis, interdum suscipit turpis blandit. Aliquam nec feugiat ante. Proin vitae pharetra lacus. Fusce rutrum aliquet felis, non rhoncus enim feugiat vitae. Integer velit sem, tincidunt sed ligula et, volutpat ornare nisl. Integer auctor vel lacus ac aliquam. Nullam pellentesque molestie lorem ut luctus. Cras auctor enim in vehicula placerat</p>
+   <p>These are the significant semantic characteristics of the Scheme
+language:
 
-		<p>Suspendisse potenti. Suspendisse nulla neque, posuere et sapien ac, fringilla condimentum lorem. Duis semper faucibus dolor, nec bibendum massa facilisis a. Donec condimentum magna ac interdum vehicula. Morbi laoreet neque est, ac finibus erat mollis ac. Donec sodales diam et justo condimentum, vitae imperdiet tortor ultrices. Quisque magna nibh, interdum id hendrerit ut, viverra quis magna. Pellentesque finibus auctor lorem, lobortis tristique libero iaculis in. Proin consequat blandit risus at gravida. Pellentesque sagittis elit eget elit interdum, sit amet egestas metus congue. Quisque cursus ullamcorper viverra.</p>
-		</div>
+     <dl>
+<dt>Variables are statically scoped<dd>Scheme is a statically scoped programming language, which means that
+each use of a variable is associated with a lexically apparent binding
+of that variable.  Algol is another statically scoped language.
+
+     <dt>Types are latent<dd>Scheme has latent types as opposed to manifest types, which
+means that Scheme associates types with values (or objects) rather than
+with variables.  Other languages with latent types (also referred to as
+weakly typed or dynamically typed languages) include APL,
+Snobol, and other dialects of Lisp.  Languages with manifest types
+(sometimes referred to as strongly typed or statically typed
+languages) include Algol 60, Pascal, and C.
+
+     <br><dt>Objects have unlimited extent<dd>All objects created during a Scheme computation, including procedures
+and continuations, have unlimited extent; no Scheme object is ever
+destroyed.  The system doesn't run out of memory because the garbage
+collector reclaims the storage occupied by an object when the object
+cannot possibly be needed by a future computation.  Other languages in
+which most objects have unlimited extent include APL and other Lisp
+dialects.
+
+     <br><dt>Proper tail recursion<dd>Scheme is <dfn>properly tail-recursive</dfn>, which means that iterative
+computation can occur in constant space, even if the iterative
+computation is described by a syntactically recursive /.  With a
+tail-recursive implementation, you can express iteration using the
+ordinary procedure-call mechanics; special iteration expressions are
+provided only for syntactic convenience.
+
+     <br><dt>Procedures are objects<dd>Scheme procedures are objects, which means that you can create them
+dynamically, store them in data structures, return them as the results
+of other procedures, and so on.  Other languages with such procedure
+objects include Common Lisp and ML.
+
+     <br><dt>Continuations are explicit<dd>In most other languages, continuations operate behind the scenes.  In
+Scheme, continuations are objects; you can use continuations for
+implementing a variety of advanced control constructs, including
+non-local exits, backtracking, and coroutines.
+
+     <br><dt>Arguments are passed by value<dd>Arguments to Scheme procedures are passed by value, which means that
+Scheme evaluates the argument expressions before the procedure gains
+control, whether or not the procedure needs the result of the
+evaluations.  ML, C, and APL are three other languages that pass
+arguments by value.  In languages such as SASL and Algol 60, argument
+expressions are not evaluated unless the values are needed by the
+procedure. 
+</dl>
+
+   <p>Scheme uses a parenthesized-list Polish notation to describe programs
+and (other) data.  The syntax of Scheme, like that of most Lisp
+dialects, provides for great expressive power, largely due to its
+simplicity.  An important consequence of this simplicity is the
+susceptibility of Scheme programs and data to uniform treatment by other
+Scheme programs.  As with other Lisp dialects, the <code>read</code> primitive
+parses its input; that is, it performs syntactic as well as lexical
+decomposition of what it reads.
+
+<p>
+This section details the notational conventions used throughout the rest
+of this document.</p>
+
+<h4 class="subsection">1.1.1 Errors</h4>
+
+<p>
+When this manual uses the phrase &ldquo;an error will be signalled,&rdquo; it
+means that Scheme will call <code>error</code>, which normally halts execution
+of the program and prints an error message.</p>
+
+<h4 class="subsection">1.1.2 Examples</h4>
+
+<p>This manual gives many examples showing the evaluation of expressions. 
+The examples have a common format that shows the expression being
+evaluated on the left hand side, an &ldquo;arrow&rdquo; in the middle, and the
+value of the expression written on the right.  For example:
+
+<pre class="example">     (+ 1 2)          =&gt;  3
+</pre>
+   <p>Sometimes the arrow and value will be moved under the expression, due to
+lack of space.  Occasionally we will not care what the value is, in
+which case both the arrow and the value are omitted.
+
+   <p>If an example shows an evaluation that results in an error, an error
+message is shown, prefaced by `<samp><span class="samp">error--&gt;</span></samp>':
+
+<pre class="example">     (+ 1 'foo)                      error--&gt; Illegal datum
+</pre>
+   <p>An example that shows printed output marks it with `<samp><span class="samp">-|</span></samp>':
+
+<pre class="example">     (begin (write 'foo) 'bar)
+          -| foo
+          =&gt; bar
+</pre>
+
+<h4 class="subsection">1.1.3 Entry Format</h4>
+
+<p>name="index-entry-format-37"
+Each description of an MIT/GNU Scheme variable, special form, or
+procedure begins with one or more header lines in this format:
+
+<p>category: template</p>
+
+
+<p class="noindent">where <var>category</var> specifies the kind of item (&ldquo;variable&rdquo;,
+&ldquo;special form&rdquo;, or &ldquo;procedure&rdquo;).  The form of <var>template</var> is
+interpreted depending on <var>category</var>.
+
+     <dl>
+<dt>Variable<dd><var>Template</var> consists of the variable's name. 
+
+<br><dt>Special Form<dd><var>Template</var> starts with the syntactic keyword of the special form,
+followed by a description of the special form's syntax.  The description
+is written using the following conventions. 
+
+Named components are italicized in the printed manual, and uppercase in
+the Info file.  &ldquo;Noise&rdquo; keywords, such as the <code>else</code> keyword in
+the <code>cond</code> special form, are set in a fixed width font in the
+printed manual; in the Info file they are not distinguished. 
+Parentheses indicate themselves.
+
+     <p>A horizontal ellipsis (<small class="dots">...</small>) is describes repeated components. 
+Specifically,
+
+     <pre class="display">          <var>thing</var> <small class="dots">...</small>
+     </pre>
+     <p class="noindent">indicates <em>zero</em> or more occurrences of <var>thing</var>, while
+
+     <pre class="display">          <var>thing</var> <var>thing</var> <small class="dots">...</small>
+     </pre>
+     <p class="noindent">indicates <em>one</em> or more occurrences of <var>thing</var>.
+
+     <p>Brackets, <code>[ ]</code>, enclose optional components.
+
+     <p>Several special forms (e.g. <code>lambda</code>) have an internal component
+consisting of a series of expressions; usually these expressions are
+evaluated sequentially under conditions that are specified in the
+description of the special form.  This sequence of expressions is commonly
+referred to as the <dfn>body</dfn> of the special form.
+
+     <br><dt>Procedure<dd><var>Template</var> starts with the name of the variable to which the
+procedure is bound, followed by a description of the procedure's
+arguments.  The arguments are described using &ldquo;lambda list&rdquo; notation, except that brackets are used to denote
+optional arguments, and ellipses are used to denote &ldquo;rest&rdquo; arguments. 
+The names of the procedure's arguments are italicized in the printed
+manual, and uppercase in the Info file.
+
+     <p>When an argument names a Scheme data type, it indicates that the
+argument must be that type of data object.  For example,
+
+     <div class="defun">
+&mdash; procedure: <b>cdr</b><var> pair</var><br>
+</div>
+
+     <p class="noindent">indicates that the standard Scheme procedure <code>cdr</code> takes one argument,
+which must be a pair.
+
+     <p>Many procedures signal an error when an argument is of the wrong type;
+usually this error is a condition of type
+<code>condition-type:wrong-type-argument</code>. 
+<a name="index-condition_002dtype_003awrong_002dtype_002dargument-54"></a>
+In addition to the standard data-type names (<var>pair</var>, <var>list</var>,
+<var>boolean</var>, <var>string</var>, etc.), the following names as arguments
+also imply type restrictions:
+
+          <dl>
+<dt>object: any object</dt>
+<dt>thunk: a procedure of no arguments</dt>
+<dt>x, <var>y</var>: real numbers</dt>
+<dt>q, <var>n</var>: integers</dt>
+<dt>k: an exact non-negative integer</dt>
+     </dl>
+
+   <p>Some examples:
+
+<div class="defun">
+&mdash; procedure: <b>list</b><var> object <small class="dots">...</small></var><br>
+</div>
+
+<p class="noindent">indicates that the standard Scheme procedure <code>list</code> takes zero or
+more arguments, each of which may be any Scheme object.</p>
+
+ <p>When this manual indicates that the value returned by some expression is
+<dfn>unspecified</dfn>, it means that the expression will evaluate to some
+object without signalling an error, but that programs should not depend
+on the value in any way.</p>
+
+<div class="defun">
+&mdash; procedure: <b>write-char</b><var> char </var>[<var>output-port</var>]<var></var><br>
+</div>
+
+<p class="noindent">indicates that the standard Scheme procedure <code>write-char</code> must be
+called with a character, <var>char</var>, and may also be called with a
+character and an output port.</p>
+</dd></dd></dl>
+
+<h1>1.2 Scheme Concepts</h1>
+
+
+<h4 class="subsection">1.2.1 Variable Bindings</h4>
+
+<p>
+Any identifier that is not a syntactic keyword may be used as a variable.  A variable may name a location where a value can
+be stored.  A variable that does so is said to be <dfn>bound</dfn> to the
+location.  The value stored in the location to which a variable is bound
+is called the variable's <dfn>value</dfn>.  (The variable is sometimes said
+to <dfn>name</dfn> the value or to be <dfn>bound to</dfn> the value.)
+
+   <p>A variable may be bound but still not have a value; such a variable is
+said to be <dfn>unassigned</dfn>.  Referencing an unassigned variable is an
+error.  When this error is signalled, it is a condition of type
+<code>condition-type:unassigned-variable</code>; sometimes the compiler does
+not generate code to signal the error.  Unassigned variables are useful
+only in combination with side effects (see <a href="Assignments.html#Assignments">Assignments</a>). 
+
+
+<h4 class="subsection">1.2.2 Environment Concepts</h4>
+
+<p><a name="index-environment-_0028defn_0029-67"></a><a name="index-unbound-variable-_0028defn_0029-68"></a><a name="index-error_002c-unbound-variable-_0028defn_0029-69"></a>An <dfn>environment</dfn> is a set of variable bindings.  If an environment
+has no binding for a variable, that variable is said to be <dfn>unbound</dfn>
+in that environment.  Referencing an unbound variable signals a
+condition of type <code>condition-type:unbound-variable</code>. 
+<a name="index-condition_002dtype_003aunbound_002dvariable-70"></a>
+<a name="index-extension_002c-of-environment-_0028defn_0029-71"></a><a name="index-environment_002c-extension-_0028defn_0029-72"></a><a name="index-shadowing_002c-of-variable-binding-_0028defn_0029-73"></a><a name="index-parent_002c-of-environment-_0028defn_0029-74"></a><a name="index-child_002c-of-environment-_0028defn_0029-75"></a><a name="index-inheritance_002c-of-environment-bindings-_0028defn_0029-76"></a>A new environment can be created by <dfn>extending</dfn> an existing
+environment with a set of new bindings.  Note that &ldquo;extending an
+environment&rdquo; does <strong>not</strong> modify the environment; rather, it
+creates a new environment that contains the new bindings and the old
+ones.  The new bindings <dfn>shadow</dfn> the old ones; that is, if an
+environment that contains a binding for <code>x</code> is extended with a new
+binding for <code>x</code>, then only the new binding is seen when <code>x</code> is
+looked up in the extended environment.  Sometimes we say that the
+original environment is the <dfn>parent</dfn> of the new one, or that the new
+environment is a <dfn>child</dfn> of the old one, or that the new environment
+<dfn>inherits</dfn> the bindings in the old one.
+
+   <p><a name="index-let-77"></a><a name="index-let_002a-78"></a><a name="index-letrec-79"></a><a name="index-do-80"></a><a name="index-define-81"></a>Procedure calls extend an environment, as do <code>let</code>, <code>let*</code>,
+<code>letrec</code>, and <code>do</code> expressions.  Internal definitions
+(see <a href="Internal-Definitions.html#Internal-Definitions">Internal Definitions</a>) also extend an environment.  (Actually,
+all the constructs that extend environments can be expressed in terms of
+procedure calls, so there is really just one fundamental mechanism for
+environment extension.)  A top-level definition (see <a href="Top_002dLevel-Definitions.html#Top_002dLevel-Definitions">Top-Level Definitions</a>) may add a binding to an existing environment.
+
+<h4 class="subsection">1.2.4 Static Scoping</h4>
+
+<p><a name="index-scoping_002c-static-90"></a><a name="index-static-scoping-91"></a>
+<a name="index-dynamic-binding_002c-versus-static-scoping-92"></a>Scheme is a statically scoped language with block structure.  In this
+respect, it is like Algol and Pascal, and unlike most other dialects of
+Lisp except for Common Lisp.
+
+   <p><a name="index-binding-expression-_0028defn_0029-93"></a><a name="index-expression_002c-binding-_0028defn_0029-94"></a>The fact that Scheme is statically scoped (rather than
+dynamically bound) means that the environment that is extended (and
+becomes current) when a procedure is called is the environment in which
+the procedure was created (i.e. in which the procedure's defining
+lambda expression was evaluated), not the environment in which the
+procedure is called.  Because all the other Scheme <dfn>binding
+expressions</dfn> can be expressed in terms of procedures, this determines
+how all bindings behave.
+
+   <p>Consider the following definitions, made at the top-level <acronym>REP</acronym>
+loop (in the initial environment):
+
+<pre class="example">     (define x 1)
+     (define (f x) (g 2))
+     (define (g y) (+ x y))
+     (f 5)                                       =&gt;  3 <span class="roman">; not</span> 7
+</pre>
+   <p>Here <code>f</code> and <code>g</code> are bound to procedures created in the
+initial environment.  Because Scheme is statically scoped, the call to
+<code>g</code> from <code>f</code> extends the initial environment (the one in which
+<code>g</code> was created) with a binding of <code>y</code> to <code>2</code>.  In this
+extended environment, <code>y</code> is <code>2</code> and <code>x</code> is <code>1</code>. 
+(In a dynamically bound Lisp, the call to <code>g</code> would extend the
+environment in effect during the call to <code>f</code>, in which <code>x</code> is
+bound to <code>5</code> by the call to <code>f</code>, and the answer would be
+<code>7</code>.)
+
+   <p><a name="index-lexical-scoping-_0028defn_0029-95"></a><a name="index-scoping_002c-lexical-_0028defn_0029-96"></a><a name="index-region_002c-of-variable-binding-_0028defn_0029-97"></a><a name="index-variable_002c-binding-region-_0028defn_0029-98"></a><a name="index-lambda-99"></a>Note that with static scoping, you can tell what binding a variable
+reference refers to just from looking at the text of the program; the
+referenced binding cannot depend on how the program is used.  That is,
+the nesting of environments (their parent-child relationship)
+corresponds to the nesting of binding expressions in program text. 
+(Because of this connection to the text of the program, static scoping
+is also called <dfn>lexical</dfn> scoping.)  For each place where a variable
+is bound in a program there is a corresponding <dfn>region</dfn> of the
+program text within which the binding is effective.  For example, the
+region of a binding established by a <code>lambda</code> expression is the
+entire body of the <code>lambda</code> expression.  The documentation of each
+binding expression explains what the region of the bindings it makes is. 
+A use of a variable (that is, a reference to or assignment of a
+variable) refers to the innermost binding of that variable whose region
+contains the variable use.  If there is no such region, the use refers
+to the binding of the variable in the global environment (which is an
+ancestor of all other environments, and can be thought of as a region in
+which all your programs are contained).</p>
+
+
+<h4>1.2.5 True and False</h4>
+
+<p>In Scheme, the boolean values true and false are denoted by <code>#t</code>
+and <code>#f</code>.  However, any Scheme value can be treated as a boolean
+for the purpose of a conditional test.  This manual uses the word
+<dfn>true</dfn> to refer to any Scheme value that counts as true, and the
+word <dfn>false</dfn> to refer to any Scheme value that counts as false.  In
+conditional tests, all values count as true except for <code>#f</code>, which
+counts as false (see <a href="Conditionals.html#Conditionals">Conditionals</a>.)</p>
+
+<h4 class="subsection">1.2.6 External Representations</h4>
+
+<p><a name="index-external-representation-_0028defn_0029-105"></a><a name="index-representation_002c-external-_0028defn_0029-106"></a>An important concept in Scheme is that of the
+<dfn>external representation</dfn> of an object as a sequence of characters. 
+For example, an external representation of the integer 28 is the
+sequence of characters `<samp><span class="samp">28</span></samp>', and an external representation of a
+list consisting of the integers 8 and 13 is the sequence of characters
+`<samp><span class="samp">(8 13)</span></samp>'.
+
+   <p>The external representation of an object is not necessarily unique.  The
+integer 28 also has representations `<samp><span class="samp">#e28.000</span></samp>' and `<samp><span class="samp">#x1c</span></samp>', and
+the list in the previous paragraph also has the representations `<samp><span class="samp">(
+08 13 )</span></samp>' and `<samp><span class="samp">(8 . (13 . ( )))</span></samp>'.
+
+   <p>Many objects have standard external representations, but some, such as
+procedures and circular data structures, do not have standard
+representations (although particular implementations may define
+representations for them).
+
+   <p>An external representation may be written in a program to obtain the
+corresponding object (see <a href="Quoting.html#Quoting">Quoting</a>).
+
+   <p><a name="index-read-107"></a><a name="index-write-108"></a>External representations can also be used for input and output.  The
+procedure <code>read</code> parses external representations, and the procedure
+<code>write</code> generates them.  Together, they provide an elegant and
+powerful input/output facility.
+
+   <p>Note that the sequence of characters `<samp><span class="samp">(+ 2 6)</span></samp>' is <em>not</em> an
+external representation of the integer 8, even though it <em>is</em> an
+expression that evaluates to the integer 8; rather, it is an external
+representation of a three-element list, the elements of which are the
+symbol <code>+</code> and the integers <code>2</code> and <code>6</code>.  Scheme's syntax
+has the property that any sequence of characters that is an expression
+is also the external representation of some object.  This can lead to
+confusion, since it may not be obvious out of context whether a given
+sequence of characters is intended to denote data or program, but it is
+also a source of power, since it facilitates writing programs such as
+interpreters and compilers that treat programs as data or data as
+programs.</p>
+
+<h4 class="subsection">1.2.7 Disjointness of Types</h4>
+
+<p>Every object satisfies at most one of the following predicates (but see
+<a href="True-and-False.html#True-and-False">True and False</a>, for an exception):</p>
+
+<pre class="example">     bit-string?     environment?    port?           symbol?
+     boolean?        null?           procedure?      vector?
+     cell?           number?         promise?        weak-pair?
+     char?           pair?           string?
+     condition?
+</pre>
+
+<h4 class="subsection">1.2.8 Storage Model</h4>
+
+<p>This section describes a model that can be used to understand Scheme's
+use of storage.
+
+   <p><a name="index-location-109"></a><a name="index-string_002dset_0021-110"></a>Variables and objects such as pairs, vectors, and strings implicitly
+denote locations or sequences of locations.  A string, for example,
+denotes as many locations as there are characters in the string.  (These
+locations need not correspond to a full machine word.)  A new value may
+be stored into one of these locations using the <code>string-set!</code>
+procedure, but the string continues to denote the same locations as
+before.
+
+   <p><a name="index-car-111"></a><a name="index-vector_002dref-112"></a><a name="index-string_002dref-113"></a><a name="index-eqv_003f-114"></a>An object fetched from a location, by a variable reference or by a
+procedure such as <code>car</code>, <code>vector-ref</code>, or <code>string-ref</code>,
+is equivalent in the sense of <code>eqv?</code> to the object last stored in
+the location before the fetch.
+
+   <p>Every location is marked to show whether it is in use.  No variable or
+object ever refers to a location that is not in use.  Whenever this
+document speaks of storage being allocated for a variable or object,
+what is meant is that an appropriate number of locations are chosen from
+the set of locations that are not in use, and the chosen locations are
+marked to indicate that they are now in use before the variable or
+object is made to denote them.
+
+   <p><a name="index-constant-115"></a><a name="index-mutable-116"></a><a name="index-immutable-117"></a><a name="index-symbol_002d_003estring-118"></a>In many systems it is desirable for constants (i.e. the values of
+literal expressions) to reside in read-only memory.  To express this, it
+is convenient to imagine that every object that denotes locations is
+associated with a flag telling whether that object is mutable or
+immutable.  The constants and the strings returned by
+<code>symbol-&gt;string</code> are then the immutable objects, while all objects
+created by other procedures are mutable.  It is an error to attempt to
+store a new value into a location that is denoted by an immutable
+object.  Note that the MIT/GNU Scheme compiler takes advantage of this
+property to share constants, but that these constants are not immutable. 
+Instead, two constants that are <code>equal?</code> may be <code>eq?</code> in
+compiled code.</p>
+
+<h1>1.3 Lexical Conventions</h1>
+<h4 class="subsection">1.3.1 Whitespace</h4>
+<p>Whitespace characters are spaces, newlines, tabs, and page breaks. Whitespace is used to improve the readability of your programs and to separate tokens from each other, when necessary. (A token is an indivisible lexical unit such as an identifier or number.) Whitespace is otherwise insignificant. Whitespace may occur between any two tokens, but not within a token. Whitespace may also occur inside a string, where it is significant.</p>
+<h1>1.3.2 Delimiters</h1>
+<p>All whitespace characters are delimiters. In addition, the following characters act as delimiters:</p>
+
+<p>     (  )  ;  "  '  `  |</p>
+<p>Finally, these next characters act as delimiters, despite the fact that Scheme does not define any special meaning for them:</p>
+
+<p>     [  ]  {  }</p>
+<p>For example, if the value of the variable name is "max":</p>
+
+<p>     (list"Hi"name(+ 1 2))                   =>  ("Hi" "max" 3)</p>
+<h1>1.3.3 Identifiers</h1>
+<p>An identifier is a sequence of one or more non-delimiter characters. Identifiers are used in several ways in Scheme programs:</p>
+<ul>
+	<li>An identifier can be used as a variable or as a syntactic keyword.</li>
+	<li>When an identifier appears as a literal or within a literal, it denotes a symbol.</li>
+</ul>
+
+<p>Scheme accepts most of the identifiers that other programming languages allow. MIT/GNU Scheme allows all of the identifiers that standard Scheme does, plus many more.</p>
+<p>MIT/GNU Scheme defines a potential identifier to be a sequence of non-delimiter characters that does not begin with either of the characters `#' or `,'. Any such sequence of characters that is not a syntactically valid number (see Numbers) is considered to be a valid identifier. Note that, although it is legal for `#' and `,' to appear in an identifier (other than in the first character position), it is poor programming practice.</p>
+<p>Here are some examples of identifiers:</p>
+<code> lambda             q
+     list->vector       soup
+     +                  V17a
+     <=?                a34kTMNs
+     the-word-recursion-has-many-meanings</code>
+
+
+
+
+</main>
 		<div class="nav-filler"></div>
 		<div class="nav-bar">
 			<ul>First</ul>
@@ -47,6 +466,7 @@ Scheme uses a parenthesized-list Polish notation to describe programs and (other
 			<ul>Third</ul>	
 		</div>
 	</div>
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 

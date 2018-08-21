@@ -21,7 +21,7 @@ body{
 	display: block;
 	background-color: #5D5C61;
 	width: 75%;
-	height: 900px;
+	height: 100%;
 }
 .nav-bar{
 	position:fixed;
@@ -54,6 +54,14 @@ h2{
 	margin: 10px;
 
 }
+h4{
+	color: white;
+	padding: 5px;
+	background-color: #557A95;
+	padding: 10px;
+	margin: 10px;
+
+}
 h1{
 	background-color: #7395AE;
 	color: white;
@@ -68,4 +76,17 @@ h1{
 ul{
 	background-color: #B1A296;
 	color: white;
+}
+code{
+	color: white;
+}
+dl{
+	color: white;
+	padding: 10px;
+}
+.example{
+	color: white;
+}
+dt{
+	padding: 5px;
 }
