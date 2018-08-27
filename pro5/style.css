@@ -13,20 +13,24 @@ body{
 .content{
 	border: red solid 2px;
 	height: 300px;
-	width: 600px;
+	width: 100%;
 	background-color: pink;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	
 }
-.project{
+.project-tile{
 	display: block;
 	height: 200px;
 	width: 200px;
 	background-color: magenta;
 }
 .nav-bar{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
 	height: 200px;
 	background-color: violet;
 	width: 100%;
@@ -39,4 +43,10 @@ h1{
 	display: block;
 	width: 100%;
 	height: 33%;
+}
+.nav-menu{
+	display:block;
+	width: 33%;
+	height:200px;
+	background-color: lime;
 }
