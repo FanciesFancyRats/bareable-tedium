@@ -50,7 +50,7 @@ function convertToDol(arr){
 	return(arr);
 }
 function convertItemCent(item){
-	return(Math.round(item) * 100);
+	return(Math.round(item * 100));
 }
 function convertItemDol(item){
 	return(Math.round(item) / 100);
@@ -77,9 +77,6 @@ function enoughCidQ(price, cash, cid){
 }
 
 function makeChange(price, cash, cid){
-	console.log('We are in makeChange????????????????????????????????????????????????????');
-	console.log(price);
-	console.log(cash);
 
 	//iterates through the cid array and determins if it can make change with the 'bills' that are avaliable. Returns change if successful, false otherwise
 	var loc = cid.length - 1;
@@ -87,8 +84,6 @@ function makeChange(price, cash, cid){
 	var changeReturned = [["PENNY", 0], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]
 
 	while((changeNeeded > 0)&&(loc >= 0)){
-		console.log("getDivisable(cid[loc][0]: " + getDivisable(cid[loc][0]));
-		console.log("changeNeeded: " + changeNeeded);
 		if((getDivisable(cid[loc][0]) > changeNeeded) || (cid[loc][1] === 0)){
 
 			loc--;	
@@ -100,6 +95,7 @@ function makeChange(price, cash, cid){
 			changeReturned[loc][1] += getDivisable(cid[loc][0]);
 		}
 	}
+	console.log("change needed is: " + changeNeeded);
 	if(changeNeeded > 0){
 		//If we still have change left to make, we couldn't make change
 		return(false);	
@@ -140,21 +136,21 @@ function transaction(price, cash, cid){
 	convertToCent(cid);
 	price = convertItemCent(price);
 	cash = convertItemCent(cash);
-	console.log("price: " + price);
-	console.log("cash: " + cash);
-	console.log("cid: " + cid);
 	if(enoughCidQ(price, cash, cid)){
 		
-		var change2 = [];
-		change2 = makeChange(price, cash, cid);
+		var change = makeChange(price, cash, cid);
+		console.log("transaction change is: " + change);
 		cid = purge(cid);
-		console.log(cid);
-		console.log('change! ' + change2);
-		change = convertToDol(change2);
-		change = purge(change2);
-		console.log('change!' + change2);
+		if(change){
+		change = convertToDol(change);
+		//change = purge(change);
+		}
+
+		console.log((change !== false)&&(cid.length > 0));
 		if((change !== false) &&(cid.length > 0)){
+			change = purge(change);
 			console.log('Open, made change');
+			console.log('change is: ' + change);
 			return({status: "OPEN", change: change});
 		}
 		else if((change !== false) &&(cid.length === 0)){
@@ -173,7 +169,7 @@ function transaction(price, cash, cid){
 }
 
 console.log(transaction(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]));
-
-
+console.log(transaction(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]));
+console.log(transaction(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]));
 
 
